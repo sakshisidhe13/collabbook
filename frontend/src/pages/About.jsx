@@ -2,11 +2,11 @@ const About = () => {
   return (
     <div className="flex justify-center px-4 sm:px-6 lg:px-10 my-10">
       <div className="w-full max-w-3xl bg-base-200 shadow-xl hover:shadow-2xl rounded-3xl p-6 md:p-8">
-        <h1 className="text-3xl font-bold text-center mb-7">About DayBook</h1>
+        <h1 className="text-3xl font-bold text-center mb-7">About CollabBook</h1>
         <p className="text-lg text-center mb-4">
-          DayBook is a secure and trusted digital journal that protects your
+          CollabBook is a secure and trusted digital journal that protects your
           thoughts and memories. Built for simplicity and reliability, it allows
-          you to document your experiences with ease. DayBook prioritizes
+          you to document your experiences with ease. CollabBook prioritizes
           privacy and a distraction-free experience, ensuring your journaling
           stays personal, secure, and meaningful.
         </p>
@@ -19,7 +19,7 @@ const About = () => {
             <span>✅</span>
             <span>
               <strong>Write & Manage Entries:</strong> Effortlessly create,
-              edit, and delete daybook entries while keeping them safe.
+              edit, and delete CollabBook entries while keeping them safe.
             </span>
           </li>
           <li className="flex items-start gap-2">
@@ -42,6 +42,14 @@ const About = () => {
               <strong>Advanced Security Features:</strong> Protect your daybook
               entries with encrypted authentication, strong passwords, and
               secure cookies.
+            </span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span>🫂</span>
+            <span>
+              <strong>Collaborate with Friends:</strong> Connect with your friends 
+              through CollabBook sharing how you feel and be there for each other!
+              Make this your shared diary entry!
             </span>
           </li>
         </ul>
@@ -84,18 +92,25 @@ const About = () => {
               <strong>Database:</strong> MongoDB with server-side validation
             </span>
           </li>
+          <li className="flex items-start gap-2">
+            <span>⭐️</span>
+            <span>
+              <strong>RealTime Communication:</strong> Socket.io-used for WebSocket-based 
+              real-time updates
+            </span>
+          </li>
         </ul>
 
         <div className="divider"></div>
 
         <p className="text-lg text-center">
-          Start your journaling journey with <strong>DayBook</strong> - where
+          Start your journaling journey with <strong>CollabBook</strong> - where
           your memories are <strong>secure</strong>, <strong>personal</strong>,
           and always accessible.
         </p>
 
         <div className="text-center mt-5">
-          <a href="https://github.com/thenileshnishad/daybook" target="_blank">
+          <a href="https://github.com/sakshisidhe13/collabbook.git" target="_blank">
             <button className="btn btn-primary">
               Explore the Code on GitHub
             </button>

@@ -11,6 +11,7 @@ import Signup from "./pages/Signup";
 import Entries from "./pages/Entries";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import EntryDetail from "./pages/EntryDetail";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="entries" element={<Entries />} />
             <Route path="about" element={<About />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/entries/:id" element={<EntryDetail />} />
           </Route>
         </Routes>
       </BrowserRouter>
