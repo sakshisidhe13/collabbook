@@ -84,7 +84,7 @@ const getEntry = async (req, res) => {
 
     if (
       !entry ||
-      (entry.createdBy.toString() !== loggedUser._id.toString() &&
+      (entry.createdBy._id.toString() !== loggedUser._id.toString() &&
         !entry.collaborators.includes(loggedUser._id))
     ) {
       return res.status(404).json({
