@@ -12,6 +12,8 @@ const EditEntry = ({ id }) => {
   const { data: getEntry, isLoading: entryLoading } = useGetEntryQuery(id, {
     skip: !open,
   });
+  console.log("EditEntry id:", id);
+  console.log("getEntry:", getEntry);
   const [updateEntry, { isLoading: entryUpdating }] = useUpdateEntryMutation();
 
   const isLoading = entryLoading || entryUpdating;
@@ -32,14 +34,20 @@ const EditEntry = ({ id }) => {
   };
 
   useEffect(() => {
-    if (getEntry) {
-      setFormData({
-        title: getEntry.data?.title || "",
-        mood: getEntry.data?.mood || "",
-        content: getEntry.data?.content || "",
-        date: new Date(getEntry.data?.date).toISOString().slice(0, 10) || "",
-      });
-    }
+    console.log("Fetched entry:", getEntry);
+
+    if (!getEntry) return;
+
+    const entry = getEntry.data ?? getEntry;
+
+    setFormData({
+      title: entry.title || "",
+      mood: entry.mood || "",
+      content: entry.content || "",
+      date: entry.date
+        ? new Date(entry.date).toISOString().slice(0, 10)
+        : "",
+    });
   }, [getEntry]);
 
   const handleSubmit = async (e) => {
