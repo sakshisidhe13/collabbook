@@ -116,8 +116,17 @@ const login = async (req, res) => {
 };
 
 const logout = (req, res) => {
-  res.cookie("token", null, { expires: new Date(0) });
-  res.status(200).json({ message: "Logout successfully!" });
+  res.cookie("token", "", {
+    expires: new Date(0),
+    httpOnly: true,
+    secure: true,
+    sameSite: "None",
+    path: "/",
+  });
+
+  res.status(200).json({
+    message: "Logout successfully!",
+  });
 };
 
 const changePassword = async (req, res) => {
