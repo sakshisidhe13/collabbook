@@ -8,6 +8,7 @@ const generateToken = (_id, res) => {
     httpOnly: true,
     secure: true,
     sameSite: "None",
+    path: "/",
   });
 };
 
